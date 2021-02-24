@@ -7,11 +7,20 @@ pipeline {
         
         stage ('checkout'){
             steps {
-            git  'https://github.com/sshamit/jpetstore-6.git'
+            git  'https://github.com/Siddhartha-Rastogi/jpetstore-6.git'
             }
         }
 
-        
+        stage ('test') {
+
+            steps {
+
+                    sh 'echo "hello"'
+                   // sh './mvnw test'
+
+            }
+
+         }       
 
         stage ('package') {
 
@@ -23,29 +32,18 @@ pipeline {
             }
 
          }
-//        stage ('sonar') {
+        stage ('sonar') {
 
-//            steps {
-
-
-  //                  sh 'sonar-scanner'
-
-  //          }
-
-  //       }     
-        
-        stage ('deploy') {
-            
-           
             steps {
 
-              //sh 'rm -rf /home/dineshreddy99077/noida/apache-tomcat-7.0.103/webapps/JPetStore'
-              //sh 'rm -f /home/dineshreddy99077/noida/apache-tomcat-7.0.103/webapps/JPetStore.war' 
-                
-              sh 'cp target/JPetStore.war /home/dineshreddy99077/noida/apache-tomcat-7.0.103/webapps/'
+
+                    sh '/opt/apps/sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner'
 
             }
-            }
+
+         }     
+        
+        
      
         
 

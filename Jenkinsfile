@@ -37,7 +37,7 @@ pipeline {
             steps {
 
 
-                    sh '/opt/apps/sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner'
+                    sh '/opt/apps/sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner -X'
 
             }
 

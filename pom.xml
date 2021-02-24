@@ -55,13 +55,7 @@
       <url>git:ssh://git@github.com/mybatis/jpetstore-6.git?gh-pages#</url>
     </site>
   </distributionManagement>
-       
-       <properties>
-  <sonar.projectKey>Siddhartha-Rastogi_jpetstore-6</sonar.projectKey>
-  <sonar.organization>siddhartha-rastogi</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-</properties>
-
+      
   <dependencies>
     <dependency>
       <groupId>commons-logging</groupId>
@@ -236,6 +230,10 @@
   </build>
 
   <properties>
+           <sonar.projectKey>Siddhartha-Rastogi_jpetstore-6</sonar.projectKey>
+  <sonar.organization>siddhartha-rastogi</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+
     <cargo.maven.containerId>tomcat${tomcat.major-version}x</cargo.maven.containerId>
     <cargo.maven.containerUrl>http://archive.apache.org/dist/tomcat/tomcat-${tomcat.major-version}/v${tomcat.version}/bin/apache-tomcat-${tomcat.version}.zip</cargo.maven.containerUrl>
     <tomcat.major-version />

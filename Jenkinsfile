@@ -7,7 +7,7 @@ pipeline {
         
         stage ('checkout'){
             steps {
-            git  'https://github.com/Siddhartha-Rastogi/jpetstore-6.git'
+            git  'https://github.com/hsindia2020/jpetstore-6.git'
             }
         }
 
@@ -15,7 +15,7 @@ pipeline {
 
             steps {
 
-                    sh 'echo "hello"'
+             //       sh 'echo "hello"'
                    // sh './mvnw test'
 
             }

@@ -17,7 +17,7 @@ pipeline {
 
              //       sh 'echo "hello"'
                    // sh './mvnw test'
-
+sh './mvnw clean'
             }
 
          }       
